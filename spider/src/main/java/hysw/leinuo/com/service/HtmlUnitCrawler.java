@@ -35,22 +35,16 @@ public class HtmlUnitCrawler {
     }
     public static void main (String[] args ) throws Exception
     {
-       String hdtable = " http://xxfb.hydroinfo.gov.cn/ssIndex.html";
-        String webUrl = "http://xxfb.hydroinfo.gov.cn/";
-        //String webUrl = "http://www.xy2046.com/xypk10.aspx?T=234&day=2016-05-29";
-       //HtmlPage page = getHtmlPage(webUrl);
-       HtmlPage page = getHtmlPage(hdtable);
-     //   System.err.println(page);
-       // final HtmlDivision div = (HtmlDivision) page.getElementById("zdhd");
-        final HtmlDivision div = (HtmlDivision) page.getElementById("jhimg");
-        div.click();
-        final HtmlDivision div2 = (HtmlDivision) page.getElementById("hdtable");
+       String blog = "http://www.cnblogs.com/";
+       HtmlPage page = getHtmlPage(blog);
+        final HtmlDivision div = (HtmlDivision) page.getElementById("post_list");
+   //     final HtmlDivision div2 = (HtmlDivision) page.getElementById("hdtable");
       //  final HtmlDivision div2 = (HtmlDivision) page1.getElementById("hdtable");
-     //   System.out.println(div.asText().toString());
+        System.out.println(div.asText().toString());
         System.out.println("-------------");
-        System.out.println(div2.asText().toString());
-       /// HtmlTableBody tbody = (HtmlTableBody) div.getBodies().get(0);
-        //printTable(tbody);
+      //  System.out.println(div2.asText().toString());
+       /* HtmlTableBody tbody = (HtmlTableBody) div.getChildNodes().get(0);
+        printTable(tbody);*/
         System.err.println("查询数据成功");
     }
 
